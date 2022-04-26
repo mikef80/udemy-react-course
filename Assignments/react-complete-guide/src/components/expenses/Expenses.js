@@ -5,16 +5,16 @@ import ExpensesFilter from "./ExpensesFilter";
 import "./Expenses.css";
 
 const Expenses = (props) => {
-  const [filterValue, setFilterValue] = useState('2022');
+  const [filterYearValue, setFilterYearValue] = useState('2022');
 
   const filterChangeHandler = (value) => {
     // console.log(`filter changed to ${value}`);
-    setFilterValue(value);
+    setFilterYearValue(value);
   }
 
   return (
     <Card className="expenses">
-      <ExpensesFilter onYearChange={filterChangeHandler} />
+      <ExpensesFilter selected={filterYearValue} onYearChange={filterChangeHandler} />
       <Card>
         <ExpenseItem
           title={props.items[0].title}
