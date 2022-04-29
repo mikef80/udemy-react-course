@@ -1,4 +1,0 @@
-Add new component - filter component - done
-Listen to change on dropdown - done
-when new year selected make sure that picked value is passed up to the expenses component, then store it in state
-add expensefilter in expenses component - done
