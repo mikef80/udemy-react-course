@@ -45,7 +45,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -67,42 +67,42 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <form id='newExpenseForm' onSubmit={submitHandler} onReset={resetHandler}>
-      <div className='new-expense__controls'>
-        <div className='new-expense__control'>
+    <form id="newExpenseForm" onSubmit={submitHandler} onReset={resetHandler}>
+      <div className="new-expense__controls">
+        <div className="new-expense__control">
           <label>Title</label>
           <input
-            type='text'
+            type="text"
             value={enteredTitle}
             onChange={titleChangeHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className="new-expense__control">
           <label>Amount</label>
           <input
             value={enteredAmount}
-            type='number'
-            min='0.01'
-            step='0.01'
+            type="number"
+            min="0.01"
+            step="0.01"
             onChange={amountChangeHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className="new-expense__control">
           <label>Date</label>
           <input
             value={enteredDate}
-            type='date'
-            min='2019-01-01'
-            max='2022-12-31'
+            type="date"
+            min="2019-01-01"
+            max="2022-12-31"
             onChange={dateChangeHandler}
           />
         </div>
       </div>
-      <div className='new-expense__actions'>
-        <button type='button' onClick={props.onCancel}>
+      <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>
           Cancel
         </button>
-        <button type='submit'>Add Expense</button>
+        <button type="submit">Add Expense</button>
       </div>
     </form>
   );
