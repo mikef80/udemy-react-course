@@ -1,4 +1,6 @@
 .InputForm {
   background-color: white;
   color: white;
+  padding: 1rem;
+  border-radius: 10px;
 }

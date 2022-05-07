@@ -1,9 +1,9 @@
-import "./Username.module.css";
+import styles from "./Username.module.css";
 
 const Username = () => {
   return (
-    <div id="Username">
-      <h1>Username</h1>
+    <div id={styles.Username}>
+      <div>Username</div>
       <input type="text"></input>
     </div>
   );

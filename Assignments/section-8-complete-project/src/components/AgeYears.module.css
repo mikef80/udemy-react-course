@@ -1,10 +1,10 @@
-#Username {
+#AgeYears {
   color: black;
   margin: 10px 0;
   font-weight: bold;
 }
 
-#Username input {
+#AgeYears input {
   border: 1px solid grey;
   height: 20px;
   width: 90%;
