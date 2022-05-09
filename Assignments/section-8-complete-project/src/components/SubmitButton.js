@@ -1,9 +1,13 @@
 import "./SubmitButton.module.css";
 
-const SubmitButton = () => {
+const SubmitButton = (props) => {
+  const onSubmit = (props) => {
+    console.log("This is a submit click");
+  };
+
   return (
     <div>
-      <button>Add User</button>
+      <button onClick={onSubmit}>Add User</button>
     </div>
   );
 };
