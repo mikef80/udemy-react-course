@@ -1,9 +1,13 @@
 import "./SubmitButton.module.css";
 
 const SubmitButton = () => {
+  const onAddUser = () => {
+    console.log("hello");
+  };
+
   return (
     <div>
-      <button>Add User</button>
+      <button onClick={onAddUser}>Add User</button>
     </div>
   );
 };
