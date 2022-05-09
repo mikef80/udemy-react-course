@@ -1,12 +1,12 @@
-import styles from "./AddUser.module.css";
+import styles from "./DisplayUsers.module.css";
 
-const AddUser = () => {
+const DisplayUsers = () => {
   const onSubmit = () => {
     console.log("Clickety click!");
   };
 
   return (
-    <div id={styles.AddUser}>
+    <div id={styles.DisplayUsers}>
       <div>Username</div>
       <input type='text'></input>
       <div>Age (Years)</div>
@@ -17,4 +17,4 @@ const AddUser = () => {
   );
 };
 
-export default AddUser;
+export default DisplayUsers;
