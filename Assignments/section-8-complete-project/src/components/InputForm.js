@@ -1,15 +1,11 @@
-import Username from "./Username";
-import AgeYears from "./AgeYears";
-import SubmitButton from "./SubmitButton";
+import AddUser from "./AddUser";
 
 import styles from "./InputForm.module.css";
 
 const InputForm = () => {
   return (
     <div className={styles.InputForm}>
-      <Username />
-      <AgeYears />
-      <SubmitButton />
+      <AddUser />
     </div>
   );
 };
