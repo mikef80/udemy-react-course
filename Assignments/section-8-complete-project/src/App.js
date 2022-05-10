@@ -1,15 +1,16 @@
 import React from "react";
 
 import InputForm from "./components/InputForm";
-import ErrorModal from "./components/ErrorModal";
+import OutputForm from "./components/OutputForm";
 
 import "./App.css";
 
 const App = () => {
   return (
     <div id="main">
-      <ErrorModal />
-      {/* <InputForm /> */}
+      <InputForm />
+      <br />
+      <OutputForm />
     </div>
   );
 };
