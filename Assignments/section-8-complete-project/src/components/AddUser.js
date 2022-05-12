@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import styles from "./AddUser.module.css";
+import Button from "./Button";
 
 const AddUser = () => {
   const [Username, updateUsername] = useState("");
@@ -48,7 +49,8 @@ const AddUser = () => {
           value={Age}
           onChange={ageChangeHandler}></input>
         <br />
-        <button onClick={onSubmit}>Add User</button>
+
+        {/* <button onClick={onSubmit}>Add User</button> */}
       </div>
     </form>
   );
