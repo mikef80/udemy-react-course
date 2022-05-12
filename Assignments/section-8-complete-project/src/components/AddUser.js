@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./AddUser.module.css";
 import Button from "./Button";
 
-const AddUser = () => {
+const AddUser = (props) => {
   const [Username, updateUsername] = useState("");
   const [Age, updateAge] = useState("");
 
@@ -16,16 +16,15 @@ const AddUser = () => {
   };
 
   const onSubmit = (e) => {
-    console.log("Clickety click!");
-
     e.preventDefault();
 
-    const person = {
+    const user = {
       name: Username,
       age: Age,
     };
 
-    console.log(person);
+    console.log(user);
+    props.onSaveUser(user);
     updateUsername("");
     updateAge("");
   };
@@ -49,7 +48,7 @@ const AddUser = () => {
           value={Age}
           onChange={ageChangeHandler}></input>
         <br />
-
+        <Button type='submit'>Submit</Button>
         {/* <button onClick={onSubmit}>Add User</button> */}
       </div>
     </form>
