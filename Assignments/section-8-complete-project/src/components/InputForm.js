@@ -7,6 +7,7 @@ const InputForm = (props) => {
     const user = {
       ...enteredUser,
       id: Math.random().toString(),
+      // key: Math.random().toString(),
     };
     console.log(user);
     props.onSaveUser(user);

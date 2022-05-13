@@ -5,45 +5,36 @@ import OutputForm from "./components/OutputForm";
 
 import "./App.css";
 
-const App = (props) => {
-  const [array, updateArray] = useState([
-    {
-      id: 1,
-      name: "Mike",
-      age: 42,
-    },
-    {
-      id: 2,
-      name: "Kate",
-      age: 37,
-    },
-  ]);
+const DUMMY_ARRAY = [
+  {
+    id: 1,
+    name: "Mike",
+    age: 42,
+  },
+  {
+    id: 2,
+    name: "Kate",
+    age: 37,
+  },
+];
 
-  /* const array = [
-    {
-      id: 1,
-      name: "Mike",
-      age: 42,
-    },
-    {
-      id: 2,
-      name: "Kate",
-      age: 37,
-    },
-  ]; */
+const App = (props) => {
+  const [users, setUsers] = useState([]);
 
   const saveUserHandler = (enteredUser) => {
+    setUsers((users) => {
+      return [enteredUser, ...users];
+    });
+
     console.log(enteredUser);
-    array.push(enteredUser);
-    console.log(array);
-    // updateArray(enteredUser);
+    console.log(DUMMY_ARRAY);
   };
 
   return (
     <div id="main">
       <InputForm onSaveUser={saveUserHandler} />
       <br />
-      <OutputForm items={array} />
+      <OutputForm items={users} />
     </div>
   );
 };
