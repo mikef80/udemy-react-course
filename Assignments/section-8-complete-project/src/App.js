@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import InputForm from "./components/InputForm";
 import OutputForm from "./components/OutputForm";
@@ -6,22 +6,37 @@ import OutputForm from "./components/OutputForm";
 import "./App.css";
 
 const App = (props) => {
-  const array = [
+  const [array, updateArray] = useState([
     {
       id: 1,
       name: "Mike",
-      age: 23,
+      age: 42,
     },
-  ];
+    {
+      id: 2,
+      name: "Kate",
+      age: 37,
+    },
+  ]);
+
+  /* const array = [
+    {
+      id: 1,
+      name: "Mike",
+      age: 42,
+    },
+    {
+      id: 2,
+      name: "Kate",
+      age: 37,
+    },
+  ]; */
 
   const saveUserHandler = (enteredUser) => {
-    /* const user = {
-      ...enteredUser,
-      id: Math.random().toString(),
-    }; */
     console.log(enteredUser);
     array.push(enteredUser);
     console.log(array);
+    // updateArray(enteredUser);
   };
 
   return (
