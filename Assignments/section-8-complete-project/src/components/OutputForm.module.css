@@ -1,7 +1,6 @@
 .OutputForm {
-    background-color: white;
-    color: white;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-  
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+}

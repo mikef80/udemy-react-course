@@ -6,7 +6,13 @@ import OutputForm from "./components/OutputForm";
 import "./App.css";
 
 const App = (props) => {
-  const array = [];
+  const array = [
+    {
+      id: 1,
+      name: "Mike",
+      age: 23,
+    },
+  ];
 
   const saveUserHandler = (enteredUser) => {
     /* const user = {
@@ -19,10 +25,10 @@ const App = (props) => {
   };
 
   return (
-    <div id='main'>
+    <div id="main">
       <InputForm onSaveUser={saveUserHandler} />
       <br />
-      <OutputForm />
+      <OutputForm items={array} />
     </div>
   );
 };
