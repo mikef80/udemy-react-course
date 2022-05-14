@@ -13,9 +13,14 @@ const InputForm = (props) => {
     props.onSaveUser(user);
   };
 
+  // console.log(props.onErrorLogged);
+
   return (
     <div className={styles.InputForm}>
-      <AddUser onSaveUser={saveUserHandler} />
+      <AddUser
+        onSaveUser={saveUserHandler}
+        onErrorLogged={props.onErrorLogged}
+      />
     </div>
   );
 };

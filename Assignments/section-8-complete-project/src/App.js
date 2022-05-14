@@ -21,6 +21,7 @@ const DUMMY_ARRAY = [
 
 const App = (props) => {
   const [users, setUsers] = useState([]);
+  const [error, setError] = useState("");
 
   const saveUserHandler = (enteredUser) => {
     setUsers((users) => {
@@ -31,10 +32,20 @@ const App = (props) => {
     console.log(DUMMY_ARRAY);
   };
 
+  const inputErrorHandler = (e) => {
+    // console.log("error logged");
+    console.log(e);
+    setError(e);
+    // e && console.log("truthy test");
+  };
+
   return (
     <div id="main">
-      <ErrorModal />
-      <InputForm onSaveUser={saveUserHandler} />
+      {error && <ErrorModal />}
+      <InputForm
+        onSaveUser={saveUserHandler}
+        onErrorLogged={inputErrorHandler}
+      />
       <br />
       <OutputForm items={users} />
     </div>

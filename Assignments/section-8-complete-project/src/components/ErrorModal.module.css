@@ -7,18 +7,42 @@
   position: absolute;
   align-items: center;
   justify-content: center;
+  background-color: #222222bb;
+  flex-direction: column;
 }
 
 .Error {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 200px;
   background-color: white;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  display: flex;
 }
 
 .ErrorHeader {
+  display: flex;
   background-color: purple;
+  height: 55px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.ErrorBody {
+  display: flex;
+  width: 100%;
+  color: black;
+  flex-grow: 1;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.ErrorButton {
+  align-self: flex-end;
+  margin-right: 20px;
+  padding: 7px 15px;
 }
