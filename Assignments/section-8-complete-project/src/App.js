@@ -21,7 +21,7 @@ const DUMMY_ARRAY = [
 
 const App = (props) => {
   const [users, setUsers] = useState([]);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
 
   const saveUserHandler = (enteredUser) => {
     setUsers((users) => {

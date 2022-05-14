@@ -19,11 +19,11 @@ const AddUser = (props) => {
     e.preventDefault();
 
     if (Age < 0) {
-      alert("enter valid age");
+      // alert("enter valid age");
       props.onErrorLogged("ageError");
       return;
     } else if (!Age || !Username) {
-      alert("Please complete both fields");
+      // alert("Please complete both fields");
       props.onErrorLogged("emptyError");
       return;
     }
