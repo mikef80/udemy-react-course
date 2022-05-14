@@ -18,6 +18,14 @@ const AddUser = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
+    if (Age < 0) {
+      alert("enter valid age");
+      return;
+    } else if (!Age || !Username) {
+      alert("Please complete both fields");
+      return;
+    }
+
     const user = {
       name: Username,
       age: Age,
@@ -35,20 +43,22 @@ const AddUser = (props) => {
         <label>Username</label>
         <br />
         <input
-          className='username'
-          type='text'
+          className="username"
+          type="text"
           value={Username}
-          onChange={nameChangeHandler}></input>
+          onChange={nameChangeHandler}
+        ></input>
         <br />
         <label>Age (Years)</label>
         <br />
         <input
-          className='age'
-          type='text'
+          className="age"
+          type="text"
           value={Age}
-          onChange={ageChangeHandler}></input>
+          onChange={ageChangeHandler}
+        ></input>
         <br />
-        <Button type='submit'>Submit</Button>
+        <Button type="submit">Submit</Button>
         {/* <button onClick={onSubmit}>Add User</button> */}
       </div>
     </form>

@@ -1,11 +1,11 @@
 .UserItem {
   color: black;
   margin: 10px 0;
-  font-weight: bold;
-  border: 1px solid red;
+  border: 1px solid #aaa;
+  padding: 5px;
 }
 
-.UserItem input {
+/* .UserItem input {
   border: 1px solid grey;
   height: 20px;
   width: 90%;
@@ -17,3 +17,4 @@ button {
   background-color: purple;
   color: white;
 }
+ */
