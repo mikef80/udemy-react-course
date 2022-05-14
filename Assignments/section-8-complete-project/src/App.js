@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import InputForm from "./components/InputForm";
 import OutputForm from "./components/OutputForm";
+import ErrorModal from "./components/ErrorModal";
 
 import "./App.css";
 
@@ -32,6 +33,7 @@ const App = (props) => {
 
   return (
     <div id="main">
+      <ErrorModal />
       <InputForm onSaveUser={saveUserHandler} />
       <br />
       <OutputForm items={users} />

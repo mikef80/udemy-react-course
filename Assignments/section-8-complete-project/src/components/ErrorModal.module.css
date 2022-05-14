@@ -1,5 +1,24 @@
 .ErrorModal {
-  height: 100%;
+  display: flex;
+  width: 900px;
+  height: 90vh;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.Error {
   width: 100%;
-  color: rgba(255, 255, 255, 0.1);
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.ErrorHeader {
+  background-color: purple;
 }
