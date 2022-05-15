@@ -33,15 +33,15 @@ const App = (props) => {
   };
 
   const inputErrorHandler = (e) => {
-    // console.log("error logged");
     console.log(e);
     setError(e);
-    // e && console.log("truthy test");
   };
 
   return (
     <div id="main">
-      {error && <ErrorModal />}
+      {error && (
+        <ErrorModal onErrorLogged={inputErrorHandler} errorType={error} />
+      )}
       <InputForm
         onSaveUser={saveUserHandler}
         onErrorLogged={inputErrorHandler}
