@@ -38,7 +38,9 @@ const App = (props) => {
         onErrorLogged={inputErrorHandler}
       />
       <br />
-      <OutputForm items={users} onRemoveItem={removeItem} />
+      {users.length > 0 && (
+        <OutputForm items={users} onRemoveItem={removeItem} />
+      )}
     </div>
   );
 };
