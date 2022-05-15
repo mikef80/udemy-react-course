@@ -6,9 +6,14 @@ const UserItem = (props) => {
   } old)`;
 
   return (
-    <div onClick={props.removeItem} className={styles.UserItem}>
+    <li
+      onClick={props.removeItem}
+      className={styles.UserItem}
+      key={props.id}
+      id={props.id}
+    >
       {output}
-    </div>
+    </li>
   );
 };
 

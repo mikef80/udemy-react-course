@@ -31,7 +31,6 @@ const AddUser = (props) => {
       age: Age,
     };
 
-    console.log(user);
     props.onSaveUser(user);
     updateUsername("");
     updateAge("");

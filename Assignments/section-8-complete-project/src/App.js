@@ -6,19 +6,6 @@ import ErrorModal from "./components/ErrorModal";
 
 import "./App.css";
 
-const DUMMY_ARRAY = [
-  {
-    id: 1,
-    name: "Mike",
-    age: 42,
-  },
-  {
-    id: 2,
-    name: "Kate",
-    age: 37,
-  },
-];
-
 const App = (props) => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(false);
@@ -27,14 +14,18 @@ const App = (props) => {
     setUsers((users) => {
       return [enteredUser, ...users];
     });
-
-    console.log(enteredUser);
-    console.log(DUMMY_ARRAY);
   };
 
   const inputErrorHandler = (e) => {
     console.log(e);
     setError(e);
+  };
+
+  const removeItem = (e) => {
+    console.log("remove this item please");
+    console.log(e.target.id);
+    const outputArray = users.filter((item) => item.id !== e.target.id);
+    setUsers(outputArray);
   };
 
   return (
@@ -47,7 +38,7 @@ const App = (props) => {
         onErrorLogged={inputErrorHandler}
       />
       <br />
-      <OutputForm items={users} />
+      <OutputForm items={users} onRemoveItem={removeItem} />
     </div>
   );
 };
