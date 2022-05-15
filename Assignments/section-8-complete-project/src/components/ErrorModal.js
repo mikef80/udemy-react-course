@@ -1,8 +1,6 @@
 import styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
-  console.log("error");
-
   const errormsg =
     props.errorType === "emptyError"
       ? `Please enter a valid name and age (non-empty values).`
