@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import Cart from "./components/cart/Cart";
 
 import Header from "./components/layout/Header";
