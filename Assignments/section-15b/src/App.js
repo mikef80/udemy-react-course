@@ -12,6 +12,12 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
+
+
+
+
+
+
       const response = await fetch(
         "https://react-http-228e1-default-rtdb.europe-west1.firebasedatabase.app/tasks.json"
       );
@@ -29,6 +35,12 @@ function App() {
       }
 
       setTasks(loadedTasks);
+
+
+
+
+
+      
     } catch (err) {
       setError(err.message || 'Something went wrong!');
     }
