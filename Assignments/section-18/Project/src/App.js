@@ -12,7 +12,7 @@ function App() {
     <Fragment>
       <Header />
       {!auth && <Auth />}
-      <Counter />
+      {auth && <Counter />}
     </Fragment>
   );
 }
