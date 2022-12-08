@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <h1>Redux Auth</h1>
-      <nav>
+      {false && <nav>
         <ul>
           <li>
             <a href='/'>My Products</a>
@@ -16,7 +16,7 @@ const Header = () => {
             <button>Logout</button>
           </li>
         </ul>
-      </nav>
+      </nav>}
     </header>
   );
 };
