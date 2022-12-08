@@ -1,10 +1,16 @@
+import { useSelector, useDispatch } from 'react-redux';
+
+import { authActions } from '../store';
 import classes from './Header.module.css';
 
 const Header = () => {
+  const counter = useSelector((state) => state.counter.counter);
+  const auth = useSelector((state) => state.auth.isAuthenticated);
+
   return (
     <header className={classes.header}>
       <h1>Redux Auth</h1>
-      {false && <nav>
+      {true && <nav>
         <ul>
           <li>
             <a href='/'>My Products</a>
