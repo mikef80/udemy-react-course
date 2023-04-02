@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import EventsNavigation from "../components/EventsNavigation";
 
-function EventsRoot() {
+function EventsRootLayout() {
   return (
     <>
       <EventsNavigation />
@@ -12,4 +12,4 @@ function EventsRoot() {
   );
 }
 
-export default EventsRoot;
+export default EventsRootLayout;
