@@ -1,7 +1,7 @@
 import { useParams } from "react-router"
 import { Link } from "react-router-dom";
 
-function ProductDetail() {
+function ProductDetailPage() {
   const params = useParams();
 
   return (
@@ -13,4 +13,4 @@ function ProductDetail() {
   )
 }
 
-export default ProductDetail
+export default ProductDetailPage
