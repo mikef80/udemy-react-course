@@ -9,9 +9,10 @@ function MainNavigation() {
           <li>
             <NavLink
               to={"/"}
-              style={({ isActive }) =>
-                isActive ? { fontWeight: 700 } : undefined
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
               }
+              end
             >
               Home
             </NavLink>
@@ -19,8 +20,8 @@ function MainNavigation() {
           <li>
             <NavLink
               to={"/events"}
-              style={({ isActive }) =>
-                isActive ? { fontWeight: 700 } : undefined
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
               }
             >
               Events

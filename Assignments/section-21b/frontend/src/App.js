@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import MainNavigation from "./components/MainNavigation";
-import EventsPage from "./components/EventsPage";
-import EventDetailPage from "./components/EventDetailPage";
-import NewEventPage from "./components/NewEventPage";
-import EditEventPage from "./components/EditEventPage";
-import RootLayout from "./components/Root";
+import HomePage from "./pages/HomePage";
+import EventsPage from "./pages/EventsPage";
+import EventDetailPage from "./pages/EventDetailPage";
+import NewEventPage from "./pages/NewEventPage";
+import EditEventPage from "./pages/EditEventPage";
+import RootLayout from "./pages/Root";
+import EventsRootLayout from "./pages/EventsRoot";
 
 // Challenge / Exercise
 
@@ -35,10 +35,16 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "/events", element: <EventsPage /> },
-      { path: "/events/:id", element: <EventDetailPage /> },
-      { path: "/events/new", element: <NewEventPage /> },
-      { path: "/events/:id/edit", element: <EditEventPage /> },
+      {
+        path: "events",
+        element: <EventsRootLayout />,
+        children: [
+          { index: true, element: <EventsPage /> },
+          { path: ":id", element: <EventDetailPage /> },
+          { path: "new", element: <NewEventPage /> },
+          { path: ":id/edit", element: <EditEventPage /> },
+        ],
+      },
     ],
   },
 ]);
