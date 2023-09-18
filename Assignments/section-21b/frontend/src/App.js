@@ -50,13 +50,18 @@ const router = createBrowserRouter([
           },
           {
             path: ":id",
+            loader: eventDetailLoader,
             children: [
               {
                 index: true,
                 element: <EventDetailPage />,
                 loader: eventDetailLoader,
               },
-              { path: "edit", element: <EditEventPage /> },
+              {
+                path: "edit",
+                element: <EditEventPage />,
+                loader: eventDetailLoader,
+              },
             ],
           },
           { path: "new", element: <NewEventPage /> },
