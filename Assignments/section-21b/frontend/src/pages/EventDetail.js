@@ -3,9 +3,7 @@ import EventItem from "../components/EventItem";
 
 const EventDetailPage = () => {
   const data = useLoaderData();
-  console.log(data);
-
-  // return <EventItem event={data.event} />;
+  return <EventItem event={data.event} />;
 };
 export default EventDetailPage;
 
